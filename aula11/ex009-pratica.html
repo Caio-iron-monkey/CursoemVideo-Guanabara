@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando...</title>
+    <style>
+        #coxa,#perna,#braços, #barriga{
+            font: bold 18px arial;
+            background-color: aqua;
+            margin-top: 30px;
+            width: 100px;
+        }
+        #calcular{
+            font: bold 18px arial;
+            margin-top: 30px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            background-color: greenyellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calcule a quantidade ideal de Proteina pra você ! </h1>
+
+    <div>
+        Seu peso<input type="number" id="peso">Kg <br>
+        Quantas doses deseja tomar por dia ?<input type="number" id="doses"><br>
+        <input type="button" value="Calcular" onclick="calcular()">
+
+        <div id="res">
+
+        </div>
+
+        
+    <h1>Calculo de quanto tempo seu treino vai demoprar</h1>
+    <div id="coxa" onclick="selecionar()">coxa</div>
+    <div id="perna" onclick="selecionar2()">pernas</div>
+    <div id="braços" onclick="selecionar3()">braços</div>
+    <div id="barriga" onclick="selecionar4()">barriga</div>
+
+    <input id="calcular" type="button" value="Calcule" onclick="calcular2()">
+
+    <h3>Selecionados:</h3>
+    <div id="selecionados"></div>
+        <script>
+
+           
+
+            function calcular(){
+                var peso = document.getElementById('peso')
+                var doses = document.getElementById('doses')
+                var res = document.getElementById('res')
+
+                var p = Number(peso.value)
+                var d = Number(doses.value)
+                var proteina = p*1.6/d
+                
+                // res.innerHTML = `Se seu peso é de ${p} e você quer tomar ${d}doses por dia, deve tomar ${proteina}g de proteina diariamente.`
+
+                if(d == 1){
+                    res.innerHTML = `Se seu peso é de ${p}Kg e você quer tomar ${d}dose por dia, deve tomar ${proteina}g de proteina diariamente.`
+                }else{ res.innerHTML = `Tendo o peso de ${p}Kg Tomando ${d} doses por dia, deve tomar ${proteina}g de Proteina por dose. `
+
+                }
+            }
+
+            function selecionar(){
+                
+                var coxa = document.getElementById('coxa')
+                
+                coxa.value = 10
+                if(coxa.value >= 9){
+                    coxa.style.background = 'green';
+                } 
+                
+            }
+            
+            function selecionar2(){
+            
+             perna = document.getElementById('perna')
+
+                perna.value = 10
+                if(perna.value >= 9){
+                    perna.style.background = 'green';
+                }
+            }
+            
+
+            function selecionar3(){
+
+                var braços = document.getElementById('braços')
+
+                braços.value = 10
+                if(braços.value >= 9){
+                    braços.style.background = 'green';
+                }
+            }
+            
+
+            function selecionar4(){
+                  
+                var barriga = document.getElementById('barriga')
+
+                barriga.value = 10
+                if(barriga.value >= 9){
+                    barriga.style.background = 'green';
+                }
+                
+            }
+            
+        </script>
+    </div>
+</body>
+</html>

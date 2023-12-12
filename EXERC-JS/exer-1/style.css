@@ -1,0 +1,40 @@
+*{margin: 0px;
+    padding: 0px;
+
+}
+body {
+    background-color: rgb(253, 196, 91);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body h1{
+    
+    padding: 20px; 
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width:55%;
+    border-radius: 15px;
+    padding-bottom: 3%;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+section img{
+    border-radius: 50%;
+    height: 300px;
+}
+section p{
+    padding: 3%;
+    font-size: 18px;    
+}
+footer {
+    color: rgba(255, 255, 255, 0.616);
+    padding: 3%;
+}
