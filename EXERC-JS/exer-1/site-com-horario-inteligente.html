@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Exer.1 - Curso em Video</title>
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Hora do dia</h1>
+        <h1 id="titulo">Hora do dia</h1>
     </header>
     <section id="sec1">
-        <p>Agora são <b id="hora">horas</b>.</p>
-        <img src="img/manha-geres.jpg" alt="" width="300px">
+        <!-- <p id="hora">Agora são tals horas ...</p> -->
+        <div id="hora">
+            Agora são tals horas...
+
+        </div>
+        <img id="img" src="img/manha-geres.jpg" alt="" width="300px">
 
     </section>
     <footer>
@@ -20,21 +24,39 @@
     </footer>
     
     <script>
-        var agora = document.getElementById('hora')
-        agora = new Date
+        function carregar(){
+            var msg = window.document.getElementById('hora')
+            var img = document.getElementById('img')
+            
+            var data = new Date()
+            var hora = data.getHours()
+            var minutos = data.getMinutes()
+            msg.innerHTML = `Agora são ${hora}H e ${minutos}min`
 
-        var hora = agora.getHour()
-
-        switch(hora<12){
-
-            case 1:
-
-            case 2:
-
-            case 3:
-
-            case 4:
-        }
+        
+            if(hora>=12 && hora<18){
+                var estilo = window.document.getElementsByTagName('body')[0]
+                    estilo.style.background = ('#40c4ff ')
+                img.src='img/tarde-geres.jpg'
+            }else{
+                if(hora>=18 && hora<21){
+                var estilo = window.document.getElementsByTagName('body')[0]
+                    estilo.style.background = ('#856faa')
+                img.src='img/entardecer-geres.jpg'
+                }else{
+                    if(hora>5 && hora<12){
+                    var estilo = window.document.getElementsByTagName('body')[0]
+                    estilo.style.background = ('rgb(253, 196, 91)')
+                    img.src='img/manha-geres.jpg'
+                    }else{
+                        var estilo = window.document.getElementsByTagName('body')[0]
+                        estilo.style.background = (' #281302')
+                        img.src='img/noite-geres.jpg'
+                    }
+                }
+            }
+        }         
+        
     </script>
 </body>
 </html>

@@ -21,20 +21,21 @@ section{
     align-items: center;
     background-color: white;
     color: black;
-    width:55%;
+    width:50%;
     border-radius: 15px;
     padding-bottom: 3%;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-}
+}   
 section img{
     border-radius: 50%;
     height: 300px;
 }
-section p{
+#hora{
     padding: 3%;
     font-size: 18px;    
 }
 footer {
-    color: rgba(255, 255, 255, 0.616);
+    color: rgba(255, 255, 255, 0.473);
     padding: 3%;
+    
 }
