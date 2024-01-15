@@ -17,7 +17,7 @@ function inserirvalue() {
         var fimvalor = Number(fim.value)
         var passovalor = Number(passo.value)
 
-// se colocar passo 0 o codico nao adiciona mais 1 ao passo e segue
+
         if( passovalor <= 0){
            window.alert (`Passo invalido!  Considerando Passo 1`)
             passovalor = 1
@@ -25,7 +25,7 @@ function inserirvalue() {
 // --------------------CONTAGEM CRESCENTE
         if (iniciovalor < fimvalor) {
             for (var i = iniciovalor; i <= fimvalor; i += passovalor) {
-                parag.innerHTML += `${i} \u{1F449}  `
+                parag.innerHTML += `${i} \u{1F449} `
             }
 // --------------------CONTAGEM DECRESCENTE
         } else {
