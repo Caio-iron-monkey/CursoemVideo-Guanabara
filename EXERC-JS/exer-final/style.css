@@ -29,6 +29,9 @@ header h1{
     margin-top: 20px;
 
 }
+#selecaonum{
+    width: 200px;
+}
 .btn{
     border-radius: 5px;
     width: 80px;
@@ -39,4 +42,7 @@ footer div{
     padding: 20px;
     color: rgba(255, 255, 255, 0.74);
     font-size: 22px;
+}
+.classexper{
+    font-size: 30px;
 }
